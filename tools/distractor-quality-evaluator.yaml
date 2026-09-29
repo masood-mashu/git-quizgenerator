@@ -1,14 +1,18 @@
-name: "distractor-quality-evaluator"
+name: distractor-quality-evaluator
+version: 1.0.0
 description: "Verifies that multiple choice distractors are grammatically parallel and plausible"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "distractor_quality_evaluator.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     distractors_json:
-      type: "string"
+      type: string
       description: "JSON list of distractor option strings"
   required:
-    - "distractors_json"
+    - distractors_json
+implementation:
+  type: script
+  path: distractor_quality_evaluator.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

@@ -1,14 +1,18 @@
-name: "rubric-scale-standardizer"
+name: rubric-scale-standardizer
+version: 1.0.0
 description: "Generates 4-tier rubric grading criteria scale for assignment evaluation"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "rubric_scale_standardizer.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     objective_text:
-      type: "string"
+      type: string
       description: "Target learning objective"
   required:
-    - "objective_text"
+    - objective_text
+implementation:
+  type: script
+  path: rubric_scale_standardizer.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
