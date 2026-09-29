@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "standardize_rubric_scale",
+  "description": "Generates 4-tier rubric grading criteria scale for assignment evaluation",
+  "type": "object",
+  "properties": {
+    "objective_text": {
+      "type": "string",
+      "description": "Target learning objective"
+    }
+  },
+  "required": [
+    "objective_text"
+  ]
+}

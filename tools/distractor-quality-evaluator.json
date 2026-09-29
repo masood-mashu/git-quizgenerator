@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "evaluate_distractor_quality",
+  "description": "Verifies that multiple choice distractors are grammatically parallel and plausible",
+  "type": "object",
+  "properties": {
+    "distractors_json": {
+      "type": "string",
+      "description": "JSON list of distractor option strings"
+    }
+  },
+  "required": [
+    "distractors_json"
+  ]
+}

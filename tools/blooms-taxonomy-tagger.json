@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "tag_blooms_taxonomy",
+  "description": "Categorizes question prompt into Bloom's Revised Taxonomy cognitive dimensions",
+  "type": "object",
+  "properties": {
+    "question_text": {
+      "type": "string",
+      "description": "Question text prompt to categorize"
+    }
+  },
+  "required": [
+    "question_text"
+  ]
+}

@@ -1,0 +1,14 @@
+name: "blooms-taxonomy-tagger"
+description: "Categorizes question prompt into Bloom's Revised Taxonomy cognitive dimensions"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "blooms_taxonomy_tagger.py"
+parameters:
+  type: "object"
+  properties:
+    question_text:
+      type: "string"
+      description: "Question text prompt to categorize"
+  required:
+    - "question_text"
